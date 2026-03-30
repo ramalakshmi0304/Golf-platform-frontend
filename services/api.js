@@ -2,7 +2,8 @@ import axios from 'axios';
 import { supabase } from '../src/config/supabaseClient'
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  withCredentials: true
 });
 
 // Automatically add the Supabase token to every request
